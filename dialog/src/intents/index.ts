@@ -4,6 +4,7 @@ import thanksRegistration from "./thanks";
 import helpRegistration from "./help";
 import nextMeetupLocationRegistration from "./nextmeetuplocation";
 import nextMeetupParticipationRegistration from "./meetupparticipantcount";
+import  howareyouRegistration from "./howareyou";
 
 
 export default [
@@ -12,5 +13,6 @@ export default [
     ...thanksRegistration,
     ...helpRegistration,
     ...nextMeetupLocationRegistration,
-    ...nextMeetupParticipationRegistration
+    ...nextMeetupParticipationRegistration,
+    ...howareyouRegistration
 ]
