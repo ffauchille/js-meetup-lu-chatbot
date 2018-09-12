@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "declaration": true,
+        "importHelpers": true,
+        "jsx": "react",
+        "lib": [
+            "dom",
+            "es2017"
+        ],
+        "module": "commonjs",
+        "noImplicitAny": false,
+        "outDir": "./built/",
+        "target": "es5",
+        "skipLibCheck": true,
+        "sourceMap": true,
+        "inlineSources": true,
+        "strictNullChecks": false
+    },
+    "files": [
+        "src/adaptivecards-hostconfig.d.ts",
+        "src/BotChat.ts",
+        "src/CognitiveServices/lib.ts",
+        "src/jspeech.d.ts",
+        "src/simple-update-in.d.ts"
+    ]
+}
