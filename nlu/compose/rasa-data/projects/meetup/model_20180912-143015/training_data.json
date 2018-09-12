@@ -1,0 +1,136 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "meetup",
+            "entity": "meetup"
+          }
+        ],
+        "text": "my next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 10,
+            "end": 16,
+            "value": "meetup",
+            "entity": "meetup"
+          }
+        ],
+        "text": "when next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "meetup",
+            "entity": "meetup"
+          }
+        ],
+        "text": "forthcoming meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 12,
+            "end": 18,
+            "value": "meetup",
+            "entity": "meetup"
+          }
+        ],
+        "text": "upcoming js meetup "
+      },
+      {
+        "intent": "greetings",
+        "text": "hello"
+      },
+      {
+        "intent": "greetings",
+        "text": "hi"
+      },
+      {
+        "intent": "greetings",
+        "text": "good morning"
+      },
+      {
+        "intent": "greetings",
+        "text": "hi there"
+      },
+      {
+        "intent": "greetings",
+        "text": "hey"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "enjoy your day"
+      },
+      {
+        "intent": "goodbye",
+        "text": "have a nice day"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you later"
+      },
+      {
+        "intent": "thanks",
+        "text": "thanks"
+      },
+      {
+        "intent": "thanks",
+        "text": "thank you"
+      },
+      {
+        "intent": "thanks",
+        "text": "nice talking to you"
+      },
+      {
+        "intent": "thanks",
+        "text": "thank you for your help"
+      },
+      {
+        "intent": "thanks",
+        "text": "thanks for your time"
+      },
+      {
+        "intent": "help",
+        "text": "help me out"
+      },
+      {
+        "intent": "help",
+        "text": "what can you do"
+      },
+      {
+        "intent": "help",
+        "text": "help"
+      },
+      {
+        "intent": "help",
+        "text": "I need help"
+      },
+      {
+        "intent": "next meetup",
+        "text": "show me next meetup"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

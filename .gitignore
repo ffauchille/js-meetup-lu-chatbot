@@ -5,3 +5,4 @@ built
 
 dist/
 .DS_Store
+nlu/compose/api-data
