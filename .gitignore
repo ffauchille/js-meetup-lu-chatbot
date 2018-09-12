@@ -2,3 +2,6 @@ node_modules
 built
 .env
 *.js.map
+
+dist/
+.DS_Store

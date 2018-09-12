@@ -40,8 +40,8 @@ services:
     environment:
       - MONGO_INITDB_ROOT_USERNAME=chatbot
       - MONGO_INITDB_ROOT_PASSWORD=chatbot
-    expose:
-      - 27017
+    ports:
+      - 27018:27017
     volumes:
       - "./data:/data/db"
 

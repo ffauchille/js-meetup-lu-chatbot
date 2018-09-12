@@ -1,5 +1,6 @@
 import * as builder from "botbuilder";
 import * as request from "request";
+import { DEFAULT_INTENT_TRESHOLD } from "../dialog";
 /**
  *
  * Example of rasa response
@@ -134,7 +135,8 @@ export class RasaRecognizer extends builder.IntentRecognizer {
               let rasaRes = <RasaParseResult>body;
               callback(null, {
                 score: rasaRes.intent.confidence,
-                intent: rasaRes.intent.name
+                intent: rasaRes.intent.name,
+                intents: (rasaRes.intent_ranking || []).map(i => ({ intent: i.name, score: i.confidence }))
               });
             } else
               callback(

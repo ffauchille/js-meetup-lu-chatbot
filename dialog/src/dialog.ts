@@ -1,6 +1,7 @@
 import * as builder from 'botbuilder';
 import intentDialogRegistrations from "./intents";
 import { BotDialogRegistration } from './models';
+import { DONT_UNDERSTAND_DIALOG } from './notunderstood';
 
 export const DEFAULT_INTENT_TRESHOLD: number = 0.8;
 
@@ -34,8 +35,10 @@ function register(bot : builder.UniversalBot, registration: BotDialogRegistratio
             if (session.conversationData && session.conversationData.noActionTrigger) {
                 console.log("Action triggred in middle of prompt; we chose to ignore it")
                 session.endDialog();
-            } else { 
-                session.beginDialog(args.action);
+            } else {
+                if (args && args.intent && args.intent.score > DEFAULT_INTENT_TRESHOLD) {
+                    session.beginDialog(args.action);
+                } else session.beginDialog(DONT_UNDERSTAND_DIALOG);
             }
         }
     });

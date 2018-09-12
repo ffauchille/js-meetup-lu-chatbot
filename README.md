@@ -8,7 +8,7 @@ Serveral projects needs to interact together:
 A docker-compose deploys the full stack. To do so, just run the root ```docker-compose.yml``` [(see TL; DR)](#tldr)
 
 
-## Chat 
+## <a name=chat></a> Chat 
 
 Web chat channel forked from [BotFramwork WebChat](https://github.com/Microsoft/BotFramework-WebChat).
 

@@ -8,6 +8,6 @@ const greetingsDialog =
         session.endDialog(["Hi, what can I do for you?", "Hello there, how my I help you with?", "Good day, how can I help you with?"])
     }
 
-export const registrations = [
+export default [
     new BotDialogRegistration({ intent: GREETINGS, dialog: greetingsDialog })
 ]

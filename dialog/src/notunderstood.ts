@@ -8,7 +8,7 @@ const dontUnderstandUtterances = [
 ];
 
 const humanNeedsTakeOver = "I'm sorry, I think it is best if you contact a real person for this."
-
+export const DONT_UNDERSTAND_DIALOG = "not understood"
 export const dontUnderstandDialog = (
   session: builder.Session,
   args: any,

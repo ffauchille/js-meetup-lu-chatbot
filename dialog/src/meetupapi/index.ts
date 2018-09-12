@@ -15,7 +15,6 @@ namespace MeetupApi {
     let res = joinPath(process.env.MEETUP_ENDPOINT || "", resourcePath)
     res += resourcePath.includes("?") ? "&" : "?";
     res += `key=${process.env.MEETUP_API_KEY}&signed=true`
-    console.log("MeetupAPI: url construct is:", res);
     return res;
   }
 

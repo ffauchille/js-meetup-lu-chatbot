@@ -1,10 +1,12 @@
-import { registrations as metupRegistration } from "./nextmeetup";
-import { registrations as greetingsRegistration } from "./greetings";
-import { registrations as myEventsRegistration } from "./myevents";
+import nextMeetupRegistration from "./nextmeetup";
+import greetingsRegistration from "./greetings";
+import thanksRegistration from "./thanks";
+import helpRegistration from "./help";
 
 
 export default [
-    ...metupRegistration,
+    ...nextMeetupRegistration,
     ...greetingsRegistration,
-    ...myEventsRegistration
+    ...thanksRegistration,
+    ...helpRegistration
 ]

@@ -6,7 +6,7 @@ import corsMiddleware from "restify-cors-middleware";
 import { RasaRecognizer } from "./recognizer";
 import { CustomChatConnector } from "./connector";
 import { registerDialogs } from "./dialog";
-import { dontUnderstandDialog } from "./notunderstood";
+import { dontUnderstandDialog, DONT_UNDERSTAND_DIALOG } from "./notunderstood";
 import { repeat } from "./utils";
 
 const ERROR_DIALOG = "ERROR_DIALOG";
@@ -82,6 +82,8 @@ bot.on("error", function(data: any) {
 bot.dialog(ERROR_DIALOG, session => { 
   session.endConversation("I'm sorry, something went wrong on my part. Let's restart our conversation. How my I help you?");
 })
+
+bot.dialog(DONT_UNDERSTAND_DIALOG, dontUnderstandDialog)
 
 // register intents dialogs
 registerDialogs(bot)

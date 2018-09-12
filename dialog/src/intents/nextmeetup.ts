@@ -9,7 +9,7 @@ export const NEXT_MEETUP = "next meetup"
 const eventCard = (session: builder.Session, event: MeetupEvent) => 
     new builder.HeroCard(session)
                .title(event.name)
-               .subtitle("JavaScript Luxembourg")
+               .subtitle("JavaScript Luxembourg\n", event.venue, " inscription sofar")
                .text(event.description)
 
 const nextMeetupDialog = 
@@ -28,6 +28,6 @@ const nextMeetupDialog =
         )
     }
 
-export const registrations = [
+export default [
     new BotDialogRegistration({ intent: NEXT_MEETUP, dialog: nextMeetupDialog })
 ]
