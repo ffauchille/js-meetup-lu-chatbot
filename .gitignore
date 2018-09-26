@@ -6,3 +6,5 @@ built
 dist/
 .DS_Store
 nlu/compose/api-data
+
+nlu/compose/data/diagnostic.data/metrics.interim

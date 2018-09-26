@@ -2,21 +2,21 @@ version: "3"
 
 services:
   chat:
-    image: js-meetup-chat
+    image: ffauchille/js-meetup-lu-chatbot:chat
     container_name: js-meetup-chat
     networks:
       - meetup
     ports:
       - 8090:80
   directline:
-    image: js-meetup-directline
+    image: ffauchille/js-meetup-lu-chatbot:directline
     container_name: js-meetup-directline
     networks:
       - meetup
     ports:
       - 8081:8081
   dialog:
-    image: js-meetup-dialog
+    image: ffauchille/js-meetup-lu-chatbot:dialog
     container_name: js-meetup-dialog
     networks:
       - meetup
