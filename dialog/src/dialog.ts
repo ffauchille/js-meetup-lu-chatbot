@@ -3,7 +3,7 @@ import intentDialogRegistrations from "./intents";
 import { BotDialogRegistration } from './models';
 import { DONT_UNDERSTAND_DIALOG } from './notunderstood';
 
-export const DEFAULT_INTENT_TRESHOLD: number = 0.8;
+export const DEFAULT_INTENT_TRESHOLD: number = 0.5;
 
 /**
  * 

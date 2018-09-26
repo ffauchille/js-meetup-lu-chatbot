@@ -1,2 +1,0 @@
-model_checkpoint_path: "/app/projects/meetup/model_20180912-154545/intent_classifier_tensorflow_embedding.ckpt"
-all_model_checkpoint_paths: "/app/projects/meetup/model_20180912-154545/intent_classifier_tensorflow_embedding.ckpt"

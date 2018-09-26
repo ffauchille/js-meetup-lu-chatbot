@@ -2,45 +2,62 @@ version: "3"
 
 services:
   chat:
-    TODO
-  directline:
-    TODO
-  dialog:
-    TODO
-  rasanlu:
-    image: rasa/rasa_nlu:0.13.2-full
-    container_name: meetup-rasa-nlu
-    volumes:
-      - "./rasa-data/projects:/app/projects"
-      - "./rasa-data/logs:/app/logs"
+    image: js-meetup-chat
+    container_name: js-meetup-chat
     networks:
       - meetup
     ports:
-      - 5000:5000
+      - 8090:80
+  directline:
+    image: js-meetup-directline
+    container_name: js-meetup-directline
+    networks:
+      - meetup
+    ports:
+      - 8081:8081
+  dialog:
+    image: js-meetup-dialog
+    container_name: js-meetup-dialog
+    networks:
+      - meetup
+    environment:
+      - MEETUP_API_KEY=<YOUR_MEETUP_API_KEY>
+    ports:
+      - 3979:3978
+  rasanlu:
+    image: rasa/rasa_nlu:0.13.2-full
+    container_name: js-meetup-rasa-nlu
+    volumes:
+      - "./nlu/compose/rasa-data/projects:/app/projects"
+      - "./nlu/compose/rasa-data/logs:/app/logs"
+    networks:
+      - meetup
+    ports:
+      - 5001:5000
   nlu-trainer-app:
     image: ffauchille/nlu-trainer
-    container_name: nlu-trainer-app
+    container_name: js-meetup-nlu-trainer-app
     networks:
       - meetup
     ports:
       - 8091:80
   nlu-trainer-api:
     image: ffauchille/nlu-trainer-api
-    container_name: nlu-trainer-api
+    container_name: js-meetup-nlu-trainer-api
     networks:
       - meetup
     environment: 
-      - MONGO_URI=mongodb://chatbot:chatbot@meetup-mongo:27017/?authSource=admin
+      - MONGO_URI=mongodb://chatbot:chatbot@js-meetup-mongo:27017/?authSource=admin
       - MONGO_DB_NAME=nlutrainer
-      - RASA_ENDPOINT=http://meetup-rasa-nlu:5000
+      - RASA_ENDPOINT=http://js-meetup-rasa-nlu:5000
     volumes:
-      - "./api-data:/app/data"
+      - "./nlu/compose/api-data:/app/data"
     ports:
       - 8001:8000
   mongo:
     image: mongo:3.2
     restart: always
-    container_name: meetup-mongo
+    container_name: js-meetup-mongo
     networks:
       - meetup
     environment:
@@ -49,7 +66,7 @@ services:
     expose:
       - 27017
     volumes:
-      - "./data:/data/db"
+      - "./nlu/compose/data:/data/db"
 
 networks:
   meetup:

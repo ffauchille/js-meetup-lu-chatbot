@@ -112,18 +112,27 @@ Training data format is in yml and should respect this [specific yml format](htt
 
 # <a name="tldr"></a> TL;DR - Main docker compose starting stack
 
+Make sure you've set the MEETUP_API_KEY env var in root's ```docker-compose.yml```
+You can create one on [Meetup's website](https://secure.meetup.com/meetup_api/key/)
 To launch the chatbot, just run with the root docker compose:
 
 ```
     $ docker network create meetup
+    
     $ docker-compose pull && docker-compose up -d
 ```
 
+Two web app should be available:
+```
+    http://localhost:8090 // web chat
+    http://localhost:8091 // NLU trainer
+```
+
 Following applications must be deployed (use ```$ docker ps```):
-- **meetup-chat**                 Web chat channel running on http://localhost:8091
-- **meetup-directline**           Directline connector to handle dialog's connection
-- **meetup-dialog**               Dialog engine API using MSFT botbuilder
-- **meetup-rasa-nlu**             RASA nlu API on which the NLU is implemented in Python
-- **nlu-trainer-app**             UI to train NLU's model to be use by chatbot
-- **nlu-trainer-api**             API to persist NLU's models, intents, example and entities
-- **meetup-mongo**                MongoDB use to persist training data for NLU
+- **js-meetup-chat**                 Web chat channel running on http://localhost:8090
+- **js-meetup-directline**           Directline connector to handle dialog's connection
+- **js-meetup-dialog**               Dialog engine API using MSFT botbuilder
+- **js-meetup-rasa-nlu**             RASA nlu API on which the NLU is implemented in Python
+- **js-meetup-nlu-trainer-app**             UI to train NLU's model to be use by chatbot running on http://localhost:8091
+- **js-meetup-nlu-trainer-api**             API to persist NLU's models, intents, example and entities
+- **js-meetup-mongo**                MongoDB use to persist training data for NLU

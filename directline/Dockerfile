@@ -10,7 +10,7 @@ RUN npm install && npm run build
 
 FROM node:8.1-alpine
 
-ARG CHATBOT_API_HOST=http://localhost:3978
+ARG CHATBOT_API_HOST=http://js-meetup-dialog:3978
 ARG HTTP_ALLOW_ORIGINS=*
 
 ENV CHATBOT_API_HOST ${CHATBOT_API_HOST}

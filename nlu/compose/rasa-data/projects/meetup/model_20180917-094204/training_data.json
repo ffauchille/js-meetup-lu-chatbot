@@ -1,0 +1,76 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greetings",
+        "text": "hello"
+      },
+      {
+        "intent": "greetings",
+        "text": "hi"
+      },
+      {
+        "intent": "greetings",
+        "text": "hello buddy"
+      },
+      {
+        "intent": "greetings",
+        "text": "hey"
+      },
+      {
+        "intent": "greetings",
+        "text": "yo"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you later"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you around"
+      },
+      {
+        "intent": "next meetup",
+        "text": "next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "text": "when are next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "text": "show me next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "text": "next js meetup in luxembourg"
+      },
+      {
+        "intent": "organizer",
+        "text": "meetup organizer"
+      },
+      {
+        "intent": "organizer",
+        "text": "event organizer"
+      },
+      {
+        "intent": "organizer",
+        "text": "in charge of meetup"
+      },
+      {
+        "intent": "organizer",
+        "text": "contact person for meetup"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

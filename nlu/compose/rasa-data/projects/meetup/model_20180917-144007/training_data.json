@@ -1,0 +1,172 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greetings",
+        "text": "hello"
+      },
+      {
+        "intent": "greetings",
+        "text": "hi"
+      },
+      {
+        "intent": "greetings",
+        "text": "hello buddy"
+      },
+      {
+        "intent": "greetings",
+        "text": "hey"
+      },
+      {
+        "intent": "greetings",
+        "text": "yo"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you later"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you around"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "meetup",
+            "entity": "event"
+          }
+        ],
+        "text": "next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "meetup",
+            "entity": "event"
+          }
+        ],
+        "text": "when are next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "meetup",
+            "entity": "event"
+          }
+        ],
+        "text": "show me next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "meetup",
+            "entity": "event"
+          }
+        ],
+        "text": "next js meetup in luxembourg"
+      },
+      {
+        "intent": "organizer",
+        "entities": [
+          {
+            "start": 0,
+            "end": 6,
+            "value": "meetup",
+            "entity": "event"
+          }
+        ],
+        "text": "meetup organizer"
+      },
+      {
+        "intent": "organizer",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "event",
+            "entity": "event"
+          }
+        ],
+        "text": "event organizer"
+      },
+      {
+        "intent": "organizer",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "meetup",
+            "entity": "event"
+          }
+        ],
+        "text": "in charge of meetup"
+      },
+      {
+        "intent": "organizer",
+        "entities": [
+          {
+            "start": 19,
+            "end": 25,
+            "value": "meetup",
+            "entity": "event"
+          }
+        ],
+        "text": "contact person for meetup"
+      },
+      {
+        "intent": "organizer",
+        "entities": [
+          {
+            "start": 34,
+            "end": 40,
+            "value": "meetup",
+            "entity": "event"
+          }
+        ],
+        "text": "who is the organizer for the next meetup?"
+      },
+      {
+        "intent": "organizer",
+        "entities": [
+          {
+            "start": 23,
+            "end": 35,
+            "value": "presentation",
+            "entity": "event"
+          }
+        ],
+        "text": "who is organizing next presentation"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": [
+      {
+        "value": "event",
+        "synonyms": [
+          "meetup",
+          "presentation"
+        ]
+      }
+    ]
+  }
+}

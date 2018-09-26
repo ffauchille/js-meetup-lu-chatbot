@@ -1,0 +1,100 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greetings",
+        "text": "hello"
+      },
+      {
+        "intent": "greetings",
+        "text": "hi"
+      },
+      {
+        "intent": "greetings",
+        "entities": [
+          {
+            "start": 6,
+            "end": 11,
+            "value": "buddy",
+            "entity": "buddy"
+          }
+        ],
+        "text": "hello buddy"
+      },
+      {
+        "intent": "greetings",
+        "text": "hey"
+      },
+      {
+        "intent": "greetings",
+        "text": "yo"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you later"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you around"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 5,
+            "end": 11,
+            "value": "meetup",
+            "entity": "meetup"
+          }
+        ],
+        "text": "next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 14,
+            "end": 20,
+            "value": "meetup",
+            "entity": "meetup"
+          }
+        ],
+        "text": "when are next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 13,
+            "end": 19,
+            "value": "meetup",
+            "entity": "meetup"
+          }
+        ],
+        "text": "show me next meetup"
+      },
+      {
+        "intent": "next meetup",
+        "entities": [
+          {
+            "start": 8,
+            "end": 14,
+            "value": "meetup",
+            "entity": "meetup"
+          }
+        ],
+        "text": "next js meetup in luxembourg"
+      }
+    ],
+    "regex_features": [],
+    "entity_synonyms": []
+  }
+}

@@ -3,30 +3,37 @@ version: "3"
 services:
   rasanlu:
     image: rasa/rasa_nlu:0.13.2-full
-    container_name: meetup-rasa-nlu
+    container_name: js-meetup-rasa-nlu
     volumes:
       - "./rasa-data/projects:/app/projects"
       - "./rasa-data/logs:/app/logs"
     networks:
       - meetup
     ports:
-      - 5000:5000
+      - 5001:5000
+  duckling:
+    image: rasa/duckling:0.1.4.0
+    container_name: js-meetup-rasa-duckling
+    networks:
+      - meetup
+    ports:
+      - 5010:8000
   nlu-trainer-app:
     image: ffauchille/nlu-trainer
-    container_name: nlu-trainer-app
+    container_name: js-meetup-nlu-trainer-app
     networks:
       - meetup
     ports:
       - 8091:80
   nlu-trainer-api:
     image: ffauchille/nlu-trainer-api
-    container_name: nlu-trainer-api
+    container_name: js-meetup-nlu-trainer-api
     networks:
       - meetup
     environment: 
       - MONGO_URI=mongodb://chatbot:chatbot@meetup-mongo:27017/?authSource=admin
       - MONGO_DB_NAME=nlutrainer
-      - RASA_ENDPOINT=http://meetup-rasa-nlu:5000
+      - RASA_ENDPOINT=http://meetup-rasa-nlu:5001
     volumes:
       - "./api-data:/app/data"
     ports:
@@ -34,7 +41,7 @@ services:
   mongo:
     image: mongo:3.2
     restart: always
-    container_name: meetup-mongo
+    container_name: js-meetup-mongo
     networks:
       - meetup
     environment:
